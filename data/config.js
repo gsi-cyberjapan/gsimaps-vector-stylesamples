@@ -175,52 +175,7 @@ GSIBV.CONFIG.RECOMMEND = [
     "description": "標準地図",
     "maxNativeZoom" : 16
   },
-  /*
-  {
-    "id": "vpale_test",
-    "type": "binaryvector",
-    "title": "淡色テスト",
-    "thumbnail": "./image/thumb/pale.png",
-    "url": "./data/pale_test.json",
-    "html": "淡い配色の地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
-    "description": "淡色テスト",
-    "maxNativeZoom" : 16
-  },
-  */
-  /*
-  {
-    "id": "std",
-    "type": "raster",
-    "title": "標準地図",
-    "thumbnail": "./image/thumb/std.png",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png",
-    "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#std"
-  },
-  {
-      "id" : "seamlessphoto",
-      "type" : "raster",
-      "title" : "シームレス",
-      "thumbnail" : "./image/thumb/ort.png" ,
-      "url" : "https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
-      "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-  },
-  {
-      "id" : "sample03",
-      "type" : "binaryvector",
-      "title" : "描画テスト",
-      "thumbnail" : "./image/thumb/sample03.png" ,
-      "url" : "./data/current2.json"
-  },
-  
-  {
-    "id": "pale",
-    "type": "raster",
-    "title": "淡色地図",
-    "thumbnail": "./image/thumb/pale.png",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png",
-    "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale"
-  },
-*/
+
   {
     "id": "vpale",
     "type": "binaryvector",
@@ -243,110 +198,76 @@ GSIBV.CONFIG.RECOMMEND = [
     "maxNativeZoom" : 16
   },
 
-  /*
+
   {
-    "id": "blank",
-    "type": "raster",
-    "title": "白地図",
-    "thumbnail": "./image/thumb/blank.png",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/blank/{z}/{x}/{y}.png",
-    "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#blank"
+    "id": "light",
+    "type": "binaryvector",
+    "title": "軽い標準地図",
+    "thumbnail": "./image/thumb/light.png",
+    "url": "./data/light.json",
+    "html": "軽い標準地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "軽い標準地図",
+    "maxNativeZoom" : 16
   },
-  */
+
+
+  {
+    "id": "road",
+    "type": "binaryvector",
+    "title": "道路地図",
+    "thumbnail": "./image/thumb/road.png",
+    "url": "./data/road.json",
+    "html": "道路地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "道路地図",
+    "maxNativeZoom" : 16
+  },
   
+
   {
-    "id": "photo",
-    "type": "raster",
-    "title": "写真",
-    "description": "写真",
-    "thumbnail": "./image/thumb/ort.png",
-    "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
-    "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-  },  
-  {
-    "id": "photolabel",
-    "type": "layerset",
-    "title": "写真＋注記",
-    "description": "写真＋注記",
-    "thumbnail": "./image/thumb/ort_label.png",
-    "url": "",
-    "layers": [
-      {
-        "id": "photo2",
-        "type": "raster",
-        "title" : "写真",
-        "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
-        "html": "<div class=\"gsi_layerinfo_subtitle\">ズームレベル2～8:「世界衛星モザイク画像」<br>ズームレベル9～13:「全国ランドサットモザイク画像」<br>ズームレベル14～18:「シームレス空中写真」<br>シームレス空中写真は、国土地理院が保有する複数種別の空中写真から、各地区における最新の写真を抽出・組み合わせて作成した写真レイヤです。</div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-      },
-      {
-        "id": "vlabel",
-        "type": "binaryvector",
-        "title" : "注記",
-        "url": "./data/label.json",
-        "html" : "標準地図から注記だけ抜き出したもの</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
-        "maxNativeZoom" : 16
-      }
-    ]
-  },
-  {
-    "id": "lvlabel",
+    "id": "railway",
     "type": "binaryvector",
-    "title": "大きい文字",
-    "description": "標準地図（大きい文字）",
-    "thumbnail": "./image/thumb/l_label.png",
-    "url": "./data/llabel.json",
-    "html": "標準地図の文字を大きくしたもの<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "title": "鉄道路線図",
+    "thumbnail": "./image/thumb/railway.png",
+    "url": "./data/railway.json",
+    "html": "鉄道路線図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "鉄道路線図",
     "maxNativeZoom" : 16
   },
+
   {
-    "id": "v2std",
+    "id": "land",
     "type": "binaryvector",
-    "title": "標準地図②",
-    "description": "標準地図（立体交差あり）",
-    "thumbnail": "./image/thumb/std2.png",
-    "url": "./data/std2.json",
-    "html": "基本となる地図（立体交差あり）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "title": "地形だけ地図",
+    "thumbnail": "./image/thumb/land.png",
+    "url": "./data/land.json",
+    "html": "地形だけ地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "地形だけ地図",
     "maxNativeZoom" : 16
   },
+
   {
-    "id": "v2pale",
+    "id": "river",
     "type": "binaryvector",
-    "title": "淡色地図②",
-    "description": "淡色地図（立体交差あり）",
-    "thumbnail": "./image/thumb/pale2.png",
-    "url": "./data/pale2.json",
-    "html": "淡い配色の地図（立体交差あり）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "title": "川だけ地図",
+    "thumbnail": "./image/thumb/river.png",
+    "url": "./data/river.json",
+    "html": "川だけ地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "川だけ地図",
     "maxNativeZoom" : 16
   },
+
   {
-    "id": "v2blank",
+    "id": "kana",
     "type": "binaryvector",
-    "title": "白地図②",
-    "description": "白地図（立体交差あり）",
-    "thumbnail": "./image/thumb/blank2.png",
-    "url": "./data/blank2.json",
-    "html": "白黒の地図（立体交差あり）<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "title": "ひらがなちず",
+    "thumbnail": "./image/thumb/kana.png",
+    "url": "./data/kana.json",
+    "html": "ひらがなちず<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+    "description": "ひらがなちず",
     "maxNativeZoom" : 16
   }
 
-  /*
-  {
-      "id" : "sample02",
-      "type" : "binaryvector",
-      "title" : "ベクトルタイル[標準地図]",
-      "thumbnail" : "./image/thumb/sample02.png" ,
-      "url" : "./data/current.json",
-      "html" : "【バイナリベクトルタイル】標準地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-  },
-  {
-      "id" : "sample04",
-      "type" : "binaryvector",
-      "title" : "ベクトルタイル[シンプル]",
-      "thumbnail" : "./image/thumb/sample04.png" ,
-      "url" : "./data/current-simple.json",
-      "html" : "【バイナリベクトルタイル】シンプルな地図<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>"
-  }
-  */
+
 ];
 
 // トップ階層の順序
