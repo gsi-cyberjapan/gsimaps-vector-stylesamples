@@ -19,19 +19,19 @@
 [![道路地図](image/road.png)](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/index.html) 
 
 
-### [鉄道路線図](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/data/railway.json)
+### [鉄道路線図](https://raw.githubusercontent.com/gsi-cyberjapan/gsimaps-vector-stylesamples/master/data/railway.json?token=ACRBT4WTABUP2LWT55O7P3K6U2MF4)
 鉄道に関する情報だけを表示したスタイルです（ZL8～17では、参考として河川も表示しています）。
 
 [![鉄道路線図](image/railway.png)](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/index.html) 
 
 
-### [地形だけ地図](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/data/land.json)
+### [地形だけ地図](https://raw.githubusercontent.com/gsi-cyberjapan/gsimaps-vector-stylesamples/master/data/land.json?token=ACRBT4QEDSE4YIIDZG5PAJK6U2MIE)
 道路や建物などを表示せず、山と山名、川と川名など、自然の地形の情報のみを表示したスタイルです。地形の学習の素材にオススメです。
 
 [![地形だけ地図](image/land.png)](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/index.html) 
 
 
-### [川だけ地図](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/data/river.json)
+### [川だけ地図](https://raw.githubusercontent.com/gsi-cyberjapan/gsimaps-vector-stylesamples/master/data/river.json?token=ACRBT4RIOREQTYTDBPZPBAS6U2MKI)
 地形だけ地図からさらに表示する地物を減らし、河川や湖などに関する情報のみを表示したスタイルです。
 
 [![川だけ地図](image/river.png)](https://github.com/gsi-cyberjapan/gsimaps-vector-stylesamples/index.html) 
@@ -47,6 +47,7 @@
 
 ## 注意事項
 本レポジトリのスタイルファイルは実験的に提供しているものです。予告なく削除する可能性があります。
+
 本レポジトリのスタイルファイルの利用により生じた損失及び損害等について、国土地理院はいかなる責任も負わないものとします。
 
 
