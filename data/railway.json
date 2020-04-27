@@ -1,0 +1,6114 @@
+{
+  "title": "鉄道路線図",
+  "group": [
+    {
+      "id": "back",
+      "title": "道路等より下に描画",
+      "editZIndex": true
+    },
+    {
+      "id": "road-outline",
+      "title": "道路",
+      "zoom": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "filter": [
+        [
+          "==",
+          "line-role",
+          "outline"
+        ]
+      ]
+    },
+    {
+      "id": "road-railway-00",
+      "title": "道路-鉄道",
+      "zoom": [
+        14,
+        15,
+        16
+      ],
+      "hasOutline": true,
+      "editZIndex": true
+    },
+    {
+      "id": "road-railway-bridge-00",
+      "title": "道路-鉄道-橋",
+      "zoom": [
+        14,
+        15,
+        16
+      ],
+      "hasOutline": true,
+      "editZIndex": true
+    },
+    {
+      "id": "railway12-14",
+      "title": "鉄道12-14",
+      "zoom": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "id": "railway",
+      "title": "鉄道",
+      "zoom": [
+        4,
+        5,
+        6,
+        7,
+        17
+      ],
+      "filter": [
+        [
+          "!=",
+          "line-role",
+          "outline"
+        ]
+      ]
+    },
+    {
+      "id": "road",
+      "title": "道路",
+      "zoom": [
+        4,
+        5,
+        6,
+        7,
+        17
+      ],
+      "filter": [
+        [
+          "!=",
+          "line-role",
+          "outline"
+        ]
+      ]
+    },
+    {
+      "id": "label",
+      "title": "ラベル",
+      "editZIndex": true
+    }
+  ],
+  "list": [
+    {
+      "title": "水域",
+      "type": "item",
+      "group": [
+        "back"
+      ],
+      "zIndex": 3,
+      "list": [
+        {
+          "minzoom": 4,
+          "maxzoom": 7,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgb(190,210,255)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": false
+        },
+        {
+          "minzoom": 8,
+          "maxzoom": 16,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgb(190,210,255)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": true
+        },
+        {
+          "minzoom": 17,
+          "maxzoom": 17,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgba(190,210,255,1)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "title": "鉄道",
+      "type": "directory",
+      "list": [
+        {
+          "title": "主要な鉄道",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              58201
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 124,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,140,70,1)",
+                    "line-visible": true,
+                    "line-width": 2
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "主要な鉄道トンネル",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              58202
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 125,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,140,70,1)",
+                    "line-visible": true,
+                    "line-width": 2,
+                    "line-dasharray": [
+                      0.5,
+                      0.5
+                    ]
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "新幹線",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              58203
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 126,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,0,100,1)",
+                    "line-visible": true,
+                    "line-width": 2
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "新幹線トンネル",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              58204
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 127,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,0,100,1)",
+                    "line-visible": true,
+                    "line-width": 2,
+                    "line-dasharray": [
+                      0.5,
+                      0.5
+                    ]
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "新幹線",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "directory",
+              "list": [
+                {
+                  "title": "単線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 142,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "has",
+                          "rtCode10"
+                        ],
+                        [
+                          "==",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,0,100,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "has",
+                          "rtCode10"
+                        ],
+                        [
+                          "==",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,0,100,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "title": "複線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 143,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "has",
+                          "rtCode10"
+                        ],
+                        [
+                          "==",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,0,100,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "has",
+                          "rtCode10"
+                        ],
+                        [
+                          "==",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,0,100,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "トンネル",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 140,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "has",
+                      "rtCode10"
+                    ],
+                    [
+                      "==",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,0,100,1)",
+                        "line-width": 3,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "has",
+                      "rtCode10"
+                    ],
+                    [
+                      "==",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,0,100,1)",
+                        "line-width": 3,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "運休中",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "rtCode10"
+                ],
+                [
+                  "==",
+                  "rtCode10",
+                  "1"
+                ],
+                [
+                  "==",
+                  "opeState",
+                  1
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "staCode",
+                    "0"
+                  ],
+                  [
+                    "!has",
+                    "staCode"
+                  ]
+                ],
+                [
+                  "any",
+                  [
+                    "all",
+                    [
+                      ">=",
+                      "rtCode1",
+                      "40201000000"
+                    ],
+                    [
+                      "<",
+                      "rtCode1",
+                      "40202000000"
+                    ]
+                  ],
+                  [
+                    "all",
+                    [
+                      ">=",
+                      "rtCode1",
+                      "40216000000"
+                    ],
+                    [
+                      "<",
+                      "rtCode1",
+                      "40217000000"
+                    ]
+                  ]
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 141,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 3,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 3,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "JR",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "directory",
+              "list": [
+                {
+                  "title": "単線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 141,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "!=",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-visible": true,
+                            "line-width": 2
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "!=",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "title": "複線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 142,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "!=",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "!=",
+                          "rtCode10",
+                          "1"
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40201000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40202000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40216000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40217000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "トンネル",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 140,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "!=",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "!=",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        2
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        3
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ],
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋梁",
+              "type": "directory",
+              "list": [
+                {
+                  "title": "単線",
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "snglDbl",
+                      1
+                    ],
+                    [
+                      "==",
+                      "railState",
+                      1
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "road-railway-bridge-00",
+                    "road-railway-bridge-01",
+                    "road-railway-bridge-02",
+                    "road-railway-bridge-03",
+                    "road-railway-bridge-04"
+                  ],
+                  "zIndex": 129,
+                  "list": [
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(255,255,255,1)",
+                            "line-width": 16,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(100,100,100,1)",
+                            "line-width": 2,
+                            "line-offset": -4,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(100,100,100,1)",
+                            "line-width": 2,
+                            "line-offset": 4,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "title": "複線",
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "railState",
+                      1
+                    ],
+                    [
+                      "==",
+                      "snglDbl",
+                      2
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "road-railway-bridge-00",
+                    "road-railway-bridge-01",
+                    "road-railway-bridge-02",
+                    "road-railway-bridge-03",
+                    "road-railway-bridge-04"
+                  ],
+                  "zIndex": 129,
+                  "list": [
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(255,255,255,1)",
+                            "line-width": 16,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(100,100,100,1)",
+                            "line-width": 2,
+                            "line-offset": -4,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "butt",
+                            "line-color": "rgba(100,100,100,1)",
+                            "line-width": 2,
+                            "line-offset": 4,
+                            "line-visible": true
+                          }
+                        },
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(0,140,70,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "運休中",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 141,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "!=",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      1
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "!=",
+                      "rtCode10",
+                      "1"
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      1
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-visible": true,
+                        "line-width": 2
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "railState",
+                      5
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40201000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40202000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40216000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40217000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "JR以外",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "directory",
+              "list": [
+                {
+                  "title": "単線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 138,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "title": "複線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 139,
+                  "list": [
+                    {
+                      "minzoom": 8,
+                      "maxzoom": 10,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "opeState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40202000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40203000000"
+                            ]
+                          ],
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40205000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40206000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "トンネル",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 137,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 2,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      0
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ],
+                        "line-width": 2
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        2
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        3
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 2,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ],
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋梁",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "==",
+                  "railState",
+                  1
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "staCode",
+                    "0"
+                  ],
+                  [
+                    "!has",
+                    "staCode"
+                  ]
+                ],
+                [
+                  "any",
+                  [
+                    "all",
+                    [
+                      ">=",
+                      "rtCode",
+                      "40202000000"
+                    ],
+                    [
+                      "<",
+                      "rtCode",
+                      "40203000000"
+                    ]
+                  ],
+                  [
+                    "all",
+                    [
+                      ">=",
+                      "rtCode",
+                      "40205000000"
+                    ],
+                    [
+                      "<",
+                      "rtCode",
+                      "40206000000"
+                    ]
+                  ]
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway",
+                "road-railway-bridge-00",
+                "road-railway-bridge-01",
+                "road-railway-bridge-02",
+                "road-railway-bridge-03",
+                "road-railway-bridge-04"
+              ],
+              "zIndex": 129,
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(255,255,255,1)",
+                        "line-visible": true,
+                        "line-width": 12
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 1,
+                        "line-visible": true,
+                        "line-offset": {
+                          "stops": [
+                            [
+                              14,
+                              -2
+                            ],
+                            [
+                              16,
+                              -4
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 1,
+                        "line-visible": true,
+                        "line-offset": {
+                          "stops": [
+                            [
+                              14,
+                              2
+                            ],
+                            [
+                              16,
+                              4
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "運休中",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 138,
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      1
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "opeState",
+                      1
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "==",
+                      "railState",
+                      5
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40202000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40203000000"
+                        ]
+                      ],
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40205000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40206000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "地下鉄",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "directory",
+              "list": [
+                {
+                  "title": "単線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 138,
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40203000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40204000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          1
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40203000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40204000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 2,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                },
+                {
+                  "title": "複線",
+                  "type": "item",
+                  "group": [
+                    "railway",
+                    "railway12-14",
+                    "road-railway-00",
+                    "road-railway-01",
+                    "road-railway-02",
+                    "road-railway-03",
+                    "road-railway-04"
+                  ],
+                  "zIndex": 139,
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "railState",
+                            0
+                          ],
+                          [
+                            "==",
+                            "railState",
+                            200
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode1",
+                              "40203000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode1",
+                              "40204000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    },
+                    {
+                      "minzoom": 14,
+                      "maxzoom": 16,
+                      "filter": [
+                        "all",
+                        [
+                          "==",
+                          "ftCode",
+                          8201
+                        ],
+                        [
+                          "==",
+                          "snglDbl",
+                          2
+                        ],
+                        [
+                          "==",
+                          "railState",
+                          0
+                        ],
+                        [
+                          "any",
+                          [
+                            "==",
+                            "staCode",
+                            "0"
+                          ],
+                          [
+                            "!has",
+                            "staCode"
+                          ]
+                        ],
+                        [
+                          "any",
+                          [
+                            "all",
+                            [
+                              ">=",
+                              "rtCode",
+                              "40203000000"
+                            ],
+                            [
+                              "<",
+                              "rtCode",
+                              "40204000000"
+                            ]
+                          ]
+                        ]
+                      ],
+                      "type": "layer",
+                      "list": [
+                        {
+                          "type": "line",
+                          "source-layer": "railway",
+                          "info": {
+                            "type": "line"
+                          },
+                          "draw": {
+                            "line-cap": "square",
+                            "line-color": "rgba(70,190,0,1)",
+                            "line-width": 3,
+                            "line-visible": true
+                          }
+                        }
+                      ],
+                      "visible": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "トンネル",
+              "type": "item",
+              "group": [
+                "railway",
+                "railway12-14",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 123,
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        100
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        300
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        500
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode1",
+                          "40203000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode1",
+                          "40204000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 3,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "railState",
+                        2
+                      ],
+                      [
+                        "==",
+                        "railState",
+                        3
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "any",
+                      [
+                        "all",
+                        [
+                          ">=",
+                          "rtCode",
+                          "40203000000"
+                        ],
+                        [
+                          "<",
+                          "rtCode",
+                          "40204000000"
+                        ]
+                      ]
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 3,
+                        "line-visible": true,
+                        "line-dasharray": [
+                          0.5,
+                          0.5
+                        ]
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋梁",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "==",
+                  "railState",
+                  1
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "staCode",
+                    "0"
+                  ],
+                  [
+                    "!has",
+                    "staCode"
+                  ]
+                ],
+                [
+                  "any",
+                  [
+                    "all",
+                    [
+                      ">=",
+                      "rtCode",
+                      "40203000000"
+                    ],
+                    [
+                      "<",
+                      "rtCode",
+                      "40204000000"
+                    ]
+                  ]
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway",
+                "road-railway-bridge-00",
+                "road-railway-bridge-01",
+                "road-railway-bridge-02",
+                "road-railway-bridge-03",
+                "road-railway-bridge-04"
+              ],
+              "zIndex": 129,
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(255,255,255,1)",
+                        "line-visible": true,
+                        "line-width": 12
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 1,
+                        "line-visible": true,
+                        "line-offset": {
+                          "stops": [
+                            [
+                              14,
+                              -2
+                            ],
+                            [
+                              16,
+                              -4
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "butt",
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 1,
+                        "line-visible": true,
+                        "line-offset": {
+                          "stops": [
+                            [
+                              14,
+                              2
+                            ],
+                            [
+                              16,
+                              4
+                            ]
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "普通鉄道",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2801
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway"
+              ],
+              "zIndex": 134,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋・高架",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2803
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "road-outline",
+                "road",
+                "road-railway-bridge-00",
+                "road-railway-bridge-01",
+                "road-railway-bridge-02",
+                "road-railway-bridge-03",
+                "road-railway-bridge-04"
+              ],
+              "zIndex": 133,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-visible": true,
+                        "line-color": "rgba(255,255,255,1)",
+                        "line-width": 16,
+                        "line-cap": "butt"
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-visible": true,
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 2,
+                        "line-cap": "butt",
+                        "line-offset": -4
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-visible": true,
+                        "line-color": "rgba(100,100,100,1)",
+                        "line-width": 2,
+                        "line-cap": "butt",
+                        "line-offset": 4
+                      }
+                    },
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "トンネル",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2804
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway"
+              ],
+              "zIndex": 135,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 2,
+                        "line-dasharray": [
+                          8,
+                          8
+                        ],
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "運休中",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2806
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "railway"
+              ],
+              "zIndex": 136,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(200,200,200,1)",
+                        "line-width": 2,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "路面",
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 133,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "==",
+                  "railState",
+                  400
+                ],
+                [
+                  ">=",
+                  "rtCode1",
+                  "40204000000"
+                ],
+                [
+                  "<",
+                  "rtCode1",
+                  "40205000000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(70,190,0,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  ">=",
+                  "rtCode",
+                  "40204000000"
+                ],
+                [
+                  "<",
+                  "rtCode",
+                  "40205000000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(70,190,0,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2831
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,140,70,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "索道",
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 132,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  ">=",
+                  "rtCode1",
+                  "40206000000"
+                ],
+                [
+                  "<",
+                  "rtCode1",
+                  "40207000000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(70,190,0,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  ">=",
+                  "rtCode",
+                  "40206000000"
+                ],
+                [
+                  "<",
+                  "rtCode",
+                  "40207000000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(70,190,0,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2821
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,140,70,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "特殊鉄道",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "item",
+              "group": [
+                "railway",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 131,
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      ">=",
+                      "rtCode",
+                      "4021700000"
+                    ],
+                    [
+                      "<",
+                      "rtCode",
+                      "4021800000"
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      2811
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋・高架",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2813
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "road-outline",
+                "road",
+                "road-railway-bridge-00",
+                "road-railway-bridge-01",
+                "road-railway-bridge-02",
+                "road-railway-bridge-03",
+                "road-railway-bridge-04"
+              ],
+              "zIndex": 137,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "側線",
+          "type": "directory",
+          "list": [
+            {
+              "title": "通常部",
+              "type": "item",
+              "group": [
+                "railway",
+                "road-railway-00",
+                "road-railway-01",
+                "road-railway-02",
+                "road-railway-03",
+                "road-railway-04"
+              ],
+              "zIndex": 130,
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      8201
+                    ],
+                    [
+                      "any",
+                      [
+                        "==",
+                        "staCode",
+                        "0"
+                      ],
+                      [
+                        "!has",
+                        "staCode"
+                      ]
+                    ],
+                    [
+                      "==",
+                      "snglDbl",
+                      3
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(70,190,0,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                },
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "filter": [
+                    "all",
+                    [
+                      "==",
+                      "ftCode",
+                      2841
+                    ]
+                  ],
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "橋・高架",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  2843
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "road-outline",
+                "road",
+                "road-railway-bridge-00",
+                "road-railway-bridge-01",
+                "road-railway-bridge-02",
+                "road-railway-bridge-03",
+                "road-railway-bridge-04"
+              ],
+              "zIndex": 131,
+              "list": [
+                {
+                  "minzoom": 17,
+                  "maxzoom": 17,
+                  "type": "layer",
+                  "list": [
+                    {
+                      "type": "line",
+                      "source-layer": "railway",
+                      "info": {
+                        "type": "line"
+                      },
+                      "draw": {
+                        "line-cap": "square",
+                        "line-color": "rgba(0,140,70,1)",
+                        "line-width": 1,
+                        "line-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "雪覆い",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              8201
+            ],
+            [
+              "==",
+              "railState",
+              4
+            ],
+            [
+              "any",
+              [
+                "==",
+                "staCode",
+                "0"
+              ],
+              [
+                "!has",
+                "staCode"
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 141,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,200,200,1)",
+                    "line-visible": true,
+                    "line-width": 3
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "駅",
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 144,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "==",
+                  "railState",
+                  0
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "butt",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-width": 5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "railState",
+                    0
+                  ],
+                  [
+                    "==",
+                    "railState",
+                    1
+                  ]
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-visible": true,
+                    "line-width": 10
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "railState",
+                    0
+                  ],
+                  [
+                    "==",
+                    "railState",
+                    1
+                  ]
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-visible": true,
+                    "line-width": 24
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "地下鉄駅",
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 143,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "railState",
+                    100
+                  ],
+                  [
+                    "==",
+                    "railState",
+                    300
+                  ]
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ],
+                [
+                  "==",
+                  "snglDbl",
+                  4
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "railState",
+                    2
+                  ],
+                  [
+                    "==",
+                    "railState",
+                    3
+                  ]
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-visible": true,
+                    "line-width": 6
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  8201
+                ],
+                [
+                  "has",
+                  "staCode"
+                ],
+                [
+                  "!=",
+                  "staCode",
+                  "0"
+                ],
+                [
+                  "==",
+                  "snglDbl",
+                  4
+                ],
+                [
+                  "any",
+                  [
+                    "==",
+                    "railState",
+                    2
+                  ],
+                  [
+                    "==",
+                    "railState",
+                    3
+                  ]
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-visible": true,
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-cap": "butt",
+                    "line-width": 24
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "駅（運休中）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              8201
+            ],
+            [
+              "==",
+              "railState",
+              5
+            ],
+            [
+              "==",
+              "snglDbl",
+              4
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "railway",
+            "railway12-14",
+            "road-railway-00",
+            "road-railway-01",
+            "road-railway-02",
+            "road-railway-03",
+            "road-railway-04"
+          ],
+          "zIndex": 144,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-width": 5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "railway",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200,160,60,1)",
+                    "line-width": 10,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "海岸線",
+      "type": "directory",
+      "list": [
+        {
+          "title": "海岸線",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55101
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 21,
+          "list": [
+            {
+              "minzoom": 4,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgb(0,176,236)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5101
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 17,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgb(20,90,255)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": false
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "岩等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5102
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 18,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,0,0,0)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": false
+            }
+          ]
+        },
+        {
+          "title": "堤防等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5103
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 19,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "round",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": false
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "注記",
+      "type": "directory",
+      "list": [
+        {
+          "title": "鉄道駅名",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              422
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 17,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 17,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(19,97,69,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          12,
+                          11
+                        ],
+                        [
+                          13,
+                          13
+                        ],
+                        [
+                          14,
+                          15
+                        ],
+                        [
+                          15,
+                          12
+                        ],
+                        [
+                          16,
+                          24
+                        ],
+                        [
+                          17,
+                          42
+                        ],
+                        [
+                          18,
+                          20
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "鉄道路線名",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              421
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 17,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 13,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(255,0,255,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          9,
+                          10
+                        ],
+                        [
+                          10,
+                          12
+                        ],
+                        [
+                          11,
+                          14
+                        ],
+                        [
+                          12,
+                          11
+                        ],
+                        [
+                          13,
+                          13
+                        ]
+                      ]
+                    },
+                    "text-allow-overlap": true,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                },
+                {
+                  "minzoom": 14,
+                  "maxzoom": 17,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(255,0,255,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          14,
+                          15
+                        ],
+                        [
+                          15,
+                          16
+                        ],
+                        [
+                          16,
+                          32
+                        ],
+                        [
+                          17,
+                          60
+                        ],
+                        [
+                          18,
+                          20
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "maxNativeZoom": 16
+}

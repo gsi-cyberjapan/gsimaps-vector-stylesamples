@@ -1,0 +1,4085 @@
+{
+  "title": "川だけ地図",
+  "group": [
+    {
+      "id": "back",
+      "title": "道路等より下に描画",
+      "editZIndex": true
+    },
+    {
+      "id": "front",
+      "title": "人工水路（空間）",
+      "editZIndex": true
+    },
+    {
+      "id": "label",
+      "title": "ラベル",
+      "editZIndex": true
+    }
+  ],
+  "list": [
+    {
+      "title": "水域",
+      "type": "item",
+      "group": [
+        "back"
+      ],
+      "zIndex": 3,
+      "list": [
+        {
+          "minzoom": 4,
+          "maxzoom": 7,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgba(190,210,255,1)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": true
+        },
+        {
+          "minzoom": 8,
+          "maxzoom": 16,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgba(190,210,255,1)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": true
+        },
+        {
+          "minzoom": 17,
+          "maxzoom": 17,
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5000
+            ]
+          ],
+          "type": "layer",
+          "list": [
+            {
+              "type": "fill",
+              "source-layer": "waterarea",
+              "info": {
+                "type": "fill"
+              },
+              "draw": {
+                "fill-color": "rgba(190,210,255,1)",
+                "fill-style": "fill",
+                "fill-visible": true,
+                "outline-visible": false
+              }
+            }
+          ],
+          "visible": true
+        }
+      ]
+    },
+    {
+      "title": "地形",
+      "type": "directory",
+      "list": [
+        {
+          "title": "湿地",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7401
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 11,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "fill",
+                  "source-layer": "landforma",
+                  "info": {
+                    "type": "fill"
+                  },
+                  "draw": {
+                    "fill-color": "rgba(153,238,192,1)",
+                    "fill-style": "fill",
+                    "fill-visible": true,
+                    "outline-visible": false
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "fill",
+                  "source-layer": "landforma",
+                  "info": {
+                    "type": "fill"
+                  },
+                  "draw": {
+                    "fill-color": "rgba(20,90,255,1)",
+                    "fill-style": "minus",
+                    "fill-visible": true,
+                    "outline-visible": false
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "万年雪",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7402
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 25,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "fill",
+                  "source-layer": "landforma",
+                  "info": {
+                    "type": "fill"
+                  },
+                  "draw": {
+                    "fill-color": "rgba(20,90,255,1)",
+                    "fill-style": "dot",
+                    "fill-visible": true,
+                    "outline-visible": false
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "滝（線）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5521
+            ],
+            [
+              "==",
+              "orgGILvl",
+              "25000"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 63,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 2,
+                    "line-offset": -3,
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "round",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 2,
+                    "line-dasharray": [
+                      0.1,
+                      2
+                    ],
+                    "line-offset": 3,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "隠顕岩",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7541
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 29,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200, 160, 60,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(200, 160, 60,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "干潟界",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7551
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 23,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true,
+                    "line-dasharray": [
+                      4,
+                      4
+                    ]
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      4,
+                      1
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "枯れ川水涯線",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7561
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 22,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-dasharray": [
+                      4,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(43,107,255,1)",
+                    "line-width": 2,
+                    "line-dasharray": [
+                      4,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "湖底急斜面",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7571
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 5,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(43,107,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(43,107,255,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "水部凹地方向線",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7572
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 32,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "landforml",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "滝（領域）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5801
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "symbol"
+          ],
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "landformp",
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "landformp",
+                  "info": [],
+                  "draw": {
+                    "icon-size": 1,
+                    "icon-image": "滝（領域）-20",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": false,
+                    "icon-visible": true,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "icon-group": "std"
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "構造物",
+      "type": "directory",
+      "list": [
+        {
+          "title": "ダム（面）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5401
+            ],
+            [
+              "==",
+              "$type",
+              "Polygon"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 43,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "fill",
+                  "source-layer": "wstructurea",
+                  "info": {
+                    "type": "fill"
+                  },
+                  "draw": {
+                    "fill-color": "rgba(200,200,200,1)",
+                    "outline-color": "rgb(100,100,100)",
+                    "outline-width": 1.5,
+                    "fill-style": "fill",
+                    "fill-visible": true,
+                    "outline-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "桟橋（面）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5411
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 43,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "fill",
+                  "source-layer": "wstructurea",
+                  "info": {
+                    "type": "fill"
+                  },
+                  "draw": {
+                    "fill-color": "rgba(255,255,255,1)",
+                    "outline-color": "rgba(100,100,100,0)",
+                    "outline-width": 1.5,
+                    "fill-style": "fill",
+                    "fill-visible": true,
+                    "outline-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "ダム（線）",
+          "filter": [
+            "all",
+            [
+              "in",
+              "ftCode",
+              5401,
+              5501
+            ],
+            [
+              "==",
+              "$type",
+              "LineString"
+            ],
+            [
+              "==",
+              "orgGILvl",
+              "25000"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 65,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "wstructurea",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "桟橋（線）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5511
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 65,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 2,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "せき",
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 66,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  5514
+                ],
+                [
+                  "==",
+                  "orgGILvl",
+                  "25000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 0.5,
+                    "line-dasharray": [
+                      4,
+                      2
+                    ],
+                    "line-offset": 6,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  5514
+                ],
+                [
+                  "==",
+                  "orgGILvl",
+                  "2500"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "水門",
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 67,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  5515
+                ],
+                [
+                  "==",
+                  "orgGILvl",
+                  "25000"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 3.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  5575
+                ],
+                [
+                  "==",
+                  "orgGILvl",
+                  "2500"
+                ]
+              ],
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "透過水制",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5532
+            ],
+            [
+              "==",
+              "orgGILvl",
+              "25000"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 68,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-dasharray": [
+                      2,
+                      2
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川トンネル口",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5551
+            ],
+            [
+              "==",
+              "orgGILvl",
+              "25000"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 69,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "ダム",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5501
+            ],
+            [
+              "==",
+              "orgGILvl",
+              "2500"
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 70,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "砂防ダム",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5502
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 71,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "桟橋（鉄、コンクリート）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5571
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 72,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "防波堤",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5563
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 74,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "敷石斜坂",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5576
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 75,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "雨水桝",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5541
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 78,
+          "list": [
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "structurel",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "海岸線",
+      "type": "directory",
+      "list": [
+        {
+          "title": "海岸線",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55101
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 21,
+          "list": [
+            {
+              "minzoom": 4,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(93,90,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5101
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 17,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "岩等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5102
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 18,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,0,0,0)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "堤防等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5103
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 19,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "round",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "coastline",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "河川",
+      "type": "directory",
+      "list": [
+        {
+          "title": "河川幅(大)",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55301
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 13,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(120,160,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          6,
+                          2
+                        ],
+                        [
+                          7,
+                          2.5
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川幅(中)",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55302
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 14,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(120,160,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          6,
+                          1.5
+                        ],
+                        [
+                          7,
+                          2
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川幅(小)",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55303
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 15,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(120,160,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          6,
+                          1
+                        ],
+                        [
+                          7,
+                          1.5
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川幅(極小)",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55304
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 16,
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(120,160,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          6,
+                          0.5
+                        ],
+                        [
+                          7,
+                          1
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "通常部",
+          "filter": [
+            "any",
+            [
+              "==",
+              "ftCode",
+              5301
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 12,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(190,210,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "通常部",
+          "filter": [
+            "any",
+            [
+              "==",
+              "ftCode",
+              5201
+            ],
+            [
+              "==",
+              "ftCode",
+              5301
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 12,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "堤防等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5203
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 10,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "round",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "枯れ川部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5302
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 2,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(190,210,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          9,
+                          1
+                        ]
+                      ]
+                    },
+                    "line-dasharray": [
+                      2,
+                      2
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-visible": true,
+                    "line-width": 0.5,
+                    "line-dasharray": [
+                      4,
+                      4
+                    ]
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "人工水路（空間）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5321
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "front"
+          ],
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(255,255,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          17,
+                          2
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          17,
+                          3
+                        ]
+                      ]
+                    },
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(255,255,255,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "人工水路（地下）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5322
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 1,
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(190,210,255,1)",
+                    "line-width": {
+                      "stops": [
+                        [
+                          9,
+                          1
+                        ]
+                      ]
+                    },
+                    "line-dasharray": [
+                      2,
+                      2
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "river",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-dasharray": [
+                      5,
+                      4
+                    ],
+                    "line-visible": true,
+                    "line-width": 1
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "湖池",
+      "type": "directory",
+      "list": [
+        {
+          "title": "湖池",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              55242
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 4,
+          "list": [
+            {
+              "minzoom": 4,
+              "maxzoom": 7,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5231
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 6,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.5,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "岩等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5232
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 7,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(0,0,0,0)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "堤防等に接する部分",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              5233
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 8,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "round",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1.5,
+                    "line-dasharray": [
+                      0.2,
+                      4
+                    ],
+                    "line-visible": true
+                  }
+                },
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-offset": -1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            },
+            {
+              "minzoom": 17,
+              "maxzoom": 17,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "lake",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(100,100,100,1)",
+                    "line-width": 1,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "等深線",
+      "type": "directory",
+      "list": [
+        {
+          "title": "通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7371
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 26,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.7,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "崖部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7373
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 26,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 13,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.7,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "計曲線通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7371
+            ],
+            [
+              "any",
+              [
+                "==",
+                "altiFlag",
+                0
+              ],
+              [
+                "==",
+                "depthFlag",
+                0
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 26,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1.4,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "主曲線通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7371
+            ],
+            [
+              "any",
+              [
+                "==",
+                "altiFlag",
+                1
+              ],
+              [
+                "==",
+                "depthFlag",
+                1
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 26,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.7,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "補助曲線通常部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7371
+            ],
+            [
+              "any",
+              [
+                "==",
+                "altiFlag",
+                2
+              ],
+              [
+                "==",
+                "depthFlag",
+                2
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 26,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.7,
+                    "line-dasharray": [
+                      40,
+                      3
+                    ],
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "計曲線崖部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7373
+            ],
+            [
+              "any",
+              [
+                "==",
+                "altiFlag",
+                0
+              ],
+              [
+                "==",
+                "depthFlag",
+                0
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 28,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 1.4,
+                    "line-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "主曲線･補助曲線崖部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7373
+            ],
+            [
+              "any",
+              [
+                "==",
+                "altiFlag",
+                1
+              ],
+              [
+                "==",
+                "depthFlag",
+                1
+              ],
+              [
+                "==",
+                "altiFlag",
+                2
+              ],
+              [
+                "==",
+                "depthFlag",
+                2
+              ]
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 28,
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "line",
+                  "source-layer": "contour",
+                  "info": {
+                    "type": "line"
+                  },
+                  "draw": {
+                    "line-cap": "square",
+                    "line-color": "rgba(20,90,255,1)",
+                    "line-width": 0.7,
+                    "line-visible": false
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "数値部",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              7372
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "back"
+          ],
+          "zIndex": 27,
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 16,
+              "type": "layer",
+              "list": [
+                {
+                  "type": "symbol",
+                  "source-layer": "contour",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": [
+                      "case",
+                      [
+                        "has",
+                        "depth"
+                      ],
+                      "depth",
+                      "alti"
+                    ]
+                  },
+                  "draw": {
+                    "text-allow-overlap": true,
+                    "text-ignore-placement": true,
+                    "text-keep-upright": true,
+                    "symbol-placement": "line",
+                    "symbol-spacing": 0,
+                    "symbol-avoid-edges": true,
+                    "text-max-width": 999,
+                    "text-rotate": 0,
+                    "text-anchor": "center",
+                    "text-padding": 0,
+                    "text-color": "rgba(20,90,255,1)",
+                    "text-halo-color": "rgba(190,210,255,1)",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true,
+                    "text-vertical": "auto"
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "注記",
+      "type": "directory",
+      "list": [
+        {
+          "title": "河川・海岸施設（水門、堤防）",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              523
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          11,
+                          18
+                        ],
+                        [
+                          12,
+                          20
+                        ],
+                        [
+                          13,
+                          22
+                        ],
+                        [
+                          14,
+                          24
+                        ],
+                        [
+                          15,
+                          26
+                        ],
+                        [
+                          16,
+                          28
+                        ],
+                        [
+                          17,
+                          30
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "堰",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              522
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          11,
+                          18
+                        ],
+                        [
+                          12,
+                          20
+                        ],
+                        [
+                          13,
+                          22
+                        ],
+                        [
+                          14,
+                          24
+                        ],
+                        [
+                          15,
+                          26
+                        ],
+                        [
+                          16,
+                          28
+                        ],
+                        [
+                          17,
+                          30
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "ダム",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              521
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 11,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          11,
+                          18
+                        ],
+                        [
+                          12,
+                          20
+                        ],
+                        [
+                          13,
+                          22
+                        ],
+                        [
+                          14,
+                          24
+                        ],
+                        [
+                          15,
+                          26
+                        ],
+                        [
+                          16,
+                          28
+                        ],
+                        [
+                          17,
+                          30
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "auto",
+                    "icon-rotation-alignment": "auto",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川、用水等",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              322
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          14,
+                          24
+                        ],
+                        [
+                          15,
+                          26
+                        ],
+                        [
+                          16,
+                          28
+                        ],
+                        [
+                          17,
+                          30
+                        ]
+                      ]
+                    },
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川、用水等",
+          "type": "directory",
+          "list": [
+            {
+              "title": "小",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  322
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "中",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  1322
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "大",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  2322
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "河川、用水等",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              322
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 10,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-allow-overlap": true,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true,
+                    "text-size": {
+                      "stops": [
+                        [
+                          8,
+                          12
+                        ],
+                        [
+                          9,
+                          14
+                        ],
+                        [
+                          10,
+                          16
+                        ],
+                        [
+                          11,
+                          18
+                        ]
+                      ]
+                    }
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "湖、沼、池、浦等",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              321
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 14,
+              "maxzoom": 16,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 14,
+                  "maxzoom": 16,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          14,
+                          24
+                        ],
+                        [
+                          15,
+                          26
+                        ],
+                        [
+                          16,
+                          28
+                        ],
+                        [
+                          17,
+                          30
+                        ]
+                      ]
+                    },
+                    "text-allow-overlap": true,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "湖、沼、池、浦等",
+          "type": "directory",
+          "list": [
+            {
+              "title": "小",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  321
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "中",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  1321
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            },
+            {
+              "title": "大",
+              "filter": [
+                "all",
+                [
+                  "==",
+                  "ftCode",
+                  100
+                ],
+                [
+                  "==",
+                  "annoCtg",
+                  2321
+                ]
+              ],
+              "type": "item",
+              "group": [
+                "label"
+              ],
+              "list": [
+                {
+                  "minzoom": 11,
+                  "maxzoom": 13,
+                  "type": "layer",
+                  "source-layer": "label",
+                  "list": [
+                    {
+                      "minzoom": 11,
+                      "maxzoom": 13,
+                      "type": "symbol",
+                      "source-layer": "label",
+                      "info": {
+                        "text-vertical-field": "arrng",
+                        "text-rotate-field": "arrngAgl",
+                        "text-anchor-field": "dspPos",
+                        "text-field": "knj"
+                      },
+                      "draw": {
+                        "text-color": "rgba(60,50,181,1)",
+                        "text-halo-color": "rgba(255,255,255,1)",
+                        "text-halo-width": 1,
+                        "text-size": {
+                          "stops": [
+                            [
+                              11,
+                              18
+                            ],
+                            [
+                              12,
+                              20
+                            ],
+                            [
+                              13,
+                              22
+                            ],
+                            [
+                              14,
+                              24
+                            ]
+                          ]
+                        },
+                        "text-allow-overlap": true,
+                        "text-rotate": "auto",
+                        "text-anchor": "auto",
+                        "text-vertical": "auto",
+                        "text-pitch-alignment": "viewport",
+                        "text-rotation-alignment": "viewport",
+                        "icon-pitch-alignment": "viewport",
+                        "icon-rotation-alignment": "viewport",
+                        "text-offset": "auto",
+                        "text-visible": true,
+                        "icon-visible": true
+                      }
+                    }
+                  ],
+                  "visible": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "湖、沼、池、浦等",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              100
+            ],
+            [
+              "==",
+              "annoCtg",
+              321
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 8,
+              "maxzoom": 10,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 8,
+                  "maxzoom": 10,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-size": {
+                      "stops": [
+                        [
+                          8,
+                          12
+                        ],
+                        [
+                          9,
+                          14
+                        ],
+                        [
+                          10,
+                          16
+                        ],
+                        [
+                          11,
+                          18
+                        ]
+                      ]
+                    },
+                    "text-allow-overlap": true,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "河川名",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              50100
+            ],
+            [
+              "==",
+              "annoCtg",
+              322
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 6,
+                  "maxzoom": 7,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true,
+                    "text-size": 16
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        },
+        {
+          "title": "湖沼名",
+          "filter": [
+            "all",
+            [
+              "==",
+              "ftCode",
+              50100
+            ],
+            [
+              "==",
+              "annoCtg",
+              321
+            ]
+          ],
+          "type": "item",
+          "group": [
+            "label"
+          ],
+          "list": [
+            {
+              "minzoom": 6,
+              "maxzoom": 7,
+              "type": "layer",
+              "source-layer": "label",
+              "list": [
+                {
+                  "minzoom": 6,
+                  "maxzoom": 7,
+                  "type": "symbol",
+                  "source-layer": "label",
+                  "info": {
+                    "text-vertical-field": "arrng",
+                    "text-rotate-field": "arrngAgl",
+                    "text-anchor-field": "dspPos",
+                    "text-field": "knj"
+                  },
+                  "draw": {
+                    "text-color": "rgba(60,50,181,1)",
+                    "text-halo-color": "rgba(255,255,255,1)",
+                    "text-halo-width": 1,
+                    "text-rotate": "auto",
+                    "text-anchor": "auto",
+                    "text-vertical": "auto",
+                    "text-pitch-alignment": "viewport",
+                    "text-rotation-alignment": "viewport",
+                    "icon-pitch-alignment": "viewport",
+                    "icon-rotation-alignment": "viewport",
+                    "text-offset": "auto",
+                    "text-visible": true,
+                    "icon-visible": true,
+                    "text-size": 16
+                  }
+                }
+              ],
+              "visible": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "maxNativeZoom": 16
+}
