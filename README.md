@@ -37,10 +37,10 @@
 [![川だけ地図](image/river.png)](https://gsi-cyberjapan.github.io/gsimaps-vector-stylesamples/index.html#7/36.104611/140.084556/&ls=river&disp=1&d=l) 
 
 
-### [ひらがな地図](https://raw.githubusercontent.com/gsi-cyberjapan/gsimaps-vector-stylesamples/master/data/kana.json)
+### [ひらがなちず](https://raw.githubusercontent.com/gsi-cyberjapan/gsimaps-vector-stylesamples/master/data/kana.json)
 文字をひらがなで表示したスタイルです。ZL8～17にて文字がひらがなで表示されます。
 
-[![ひらがな地図](image/kana.png)](https://gsi-cyberjapan.github.io/gsimaps-vector-stylesamples/index.html#8/36.104611/140.084556/&ls=kana&disp=1&d=l) 
+[![ひらがなちず](image/kana.png)](https://gsi-cyberjapan.github.io/gsimaps-vector-stylesamples/index.html#8/36.104611/140.084556/&ls=kana&disp=1&d=l) 
 
 - なお、地理院地図Vectorの「おすすめの地図」で選択できるスタイルファイルは、[地理院地図Vector（仮称）提供実験のレポジトリ](https://github.com/gsi-cyberjapan/gsimaps-vector-experiment/)をご覧ください。
 
