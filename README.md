@@ -1,7 +1,7 @@
-# 地理院地図Vector（仮称）で読み込めるスタイルのサンプル集
+# 地理院地図Vectorで読み込めるスタイルのサンプル集
 
 ## 本レポジトリについて
-本レポジトリでは、[地理院地図Vector（仮称）]( https://maps.gsi.go.jp/vector/)で読み込めるスタイルファイルのサンプルを提供しております。
+本レポジトリでは、[地理院地図Vector]( https://maps.gsi.go.jp/vector/)で読み込めるスタイルファイルのサンプルを提供しております。
 
 - 以下の各地図の名前の部分を右クリックし、「名前をつけて保存」などからスタイルファイルをダウンロードすることができます。
 保存したファイルは、地理院地図Vectorの「地図デザインの追加」-「地図デザインファイルを開く」から読み込んで表示することができます。
@@ -43,7 +43,7 @@
 
 [![ひらがなちず](image/kana.png)<br>→ この地図を見る](https://gsi-cyberjapan.github.io/gsimaps-vector-stylesamples/index.html#8/36.104611/140.084556/&ls=kana&disp=1&d=l) 
 
-- なお、地理院地図Vectorの「おすすめの地図」で選択できるスタイルファイルは、[地理院地図Vector（仮称）提供実験のレポジトリ](https://github.com/gsi-cyberjapan/gsimaps-vector-experiment/)をご覧ください。
+- なお、地理院地図Vectorの「おすすめの地図」で選択できるスタイルファイルは、[地理院地図Vector提供実験のレポジトリ](https://github.com/gsi-cyberjapan/gsimaps-vector-experiment/)をご覧ください。
 
 
 ## 注意事項
